@@ -1,0 +1,94 @@
+/* orders.css */
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #16283a;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+main {
+    padding: 20px;
+}
+
+.order {
+    background-color: #ffffff; /* White background */
+    padding: 15px; /* Padding inside the card */
+    border: 1px solid #dddddd; /* Border */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for elevation */
+    margin-bottom: 15px; /* Space between orders */
+}
+
+.order strong {
+    color: #16283a; /* Dark blue color for strong text */
+}
+
+.order p {
+    margin: 5px 0; /* Margin for paragraph elements */
+}
+
+.order span {
+    font-weight: bold; /* Bold text for span elements */
+    color: #333333; /* Dark gray color for span text */
+}
+
+/* CSS for status classes */
+.status {
+    padding: 5px 10px; /* Adjust padding */
+    border-radius: 5px; /* Rounded corners */
+    display: inline-block; /* Ensure inline display */
+    margin-right: 5px; /* Add spacing between buttons */
+}
+
+.status-pending {
+    background-color: #ffcc00;
+    color: #ffffff;
+}
+
+.status-fully-paid {
+    background-color: #28a745;
+    color: #ffffff;
+}
+
+.status-partially-paid {
+    background-color: #ffc107;
+    color: #ffffff;
+}
+
+/* CSS for change status button */
+.change-status-btn,
+.change-amount-paid-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0056b3; /* Blue color */
+    color: white;
+    cursor: pointer;
+    margin-top: 5px; /* Add some space between buttons */
+    float: right; /* Align buttons to the right */
+}
+
+.change-status-btn:hover,
+.change-amount-paid-btn:hover {
+    background-color: #003d80; /* Darker blue color on hover */
+}
+
+/* Section styles */
+section {
+    margin-bottom: 30px;
+}
+
+section h2 {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    color: #16283a;
+}

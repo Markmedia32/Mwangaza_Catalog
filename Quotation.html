@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotation & Invoices</title>
+    <link rel="stylesheet" href="Quotation.css"> <!-- Link to CSS stylesheet -->
+</head>
+<body>
+    <header>
+        <h1>Quotation & Invoices</h1>
+    </header>
+    <main>
+        <section id="quotation-form">
+            <h2>Create Quotation</h2>
+            <!-- Form for creating a new quotation -->
+            <form id="quotation-form">
+                <!-- Quotation input fields -->
+                <label for="customer-name">Customer Name:</label>
+                <input type="text" id="customer-name" name="customer-name" required>
+                <label for="quotation-details">Quotation Details:</label>
+                <textarea id="quotation-details" name="quotation-details" rows="4" required></textarea>
+                <button type="submit">Send Quotation</button>
+            </form>
+        </section>
+        <section id="invoice-form">
+            <h2>Create Invoice</h2>
+            <!-- Form for creating a new invoice -->
+            <form id="invoice-form">
+                <!-- Invoice input fields -->
+                <label for="customer-name">Customer Name:</label>
+                <input type="text" id="customer-name" name="customer-name" required>
+                <label for="invoice-details">Invoice Details:</label>
+                <textarea id="invoice-details" name="invoice-details" rows="4" required></textarea>
+                <button type="submit">Send Invoice</button>
+            </form>
+        </section>
+        <section id="receipt-form">
+            <h2>Create Receipt</h2>
+            <!-- Form for creating a new receipt -->
+            <form id="receipt-form">
+                <!-- Receipt input fields -->
+                <label for="customer-name">Customer Name:</label>
+                <input type="text" id="customer-name" name="customer-name" required>
+                <label for="receipt-details">Receipt Details:</label>
+                <textarea id="receipt-details" name="receipt-details" rows="4" required></textarea>
+                <button type="submit">Send Receipt</button>
+            </form>
+        </section>
+        <section id="existing-documents">
+            <h2>Existing Documents</h2>
+            <!-- Display existing quotations, invoices, and receipts -->
+            <div id="quotation-list">
+                <h3>Quotations</h3>
+                <ul>
+                    <!-- List of quotations will be displayed here -->
+                </ul>
+            </div>
+            <div id="invoice-list">
+                <h3>Invoices</h3>
+                <ul>
+                    <!-- List of invoices will be displayed here -->
+                </ul>
+            </div>
+            <div id="receipt-list">
+                <h3>Receipts</h3>
+                <ul>
+                    <!-- List of receipts will be displayed here -->
+                </ul>
+            </div>
+        </section>
+    </main>
+    <script src="Quotation.js"></script> <!-- Link to JavaScript file -->
+</body>
+</html>

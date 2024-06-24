@@ -1,0 +1,107 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* Expense form styles */
+#add-expense {
+    margin-bottom: 20px;
+}
+
+#add-expense h2 {
+    margin-bottom: 10px;
+}
+
+#expense-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#expense-form label {
+    margin-bottom: 5px;
+}
+
+#expense-form input[type="text"],
+#expense-form input[type="number"],
+#expense-form input[type="date"], /* Ensure this line is added */
+#expense-form button {
+    margin-bottom: 10px;
+    padding: 8px;
+    font-size: 16px;
+}
+
+#expense-form button {
+    background-color: #ff5733;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#expense-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Expenses list styles */
+#expenses-list {
+    border-top: 2px solid #ccc;
+    padding-top: 20px;
+}
+
+#expenses-list h2 {
+    margin-bottom: 10px;
+}
+
+#expenses-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#expenses-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.expense-name {
+    font-weight: bold;
+    color: #ffb300;
+}
+
+.expense-amount {
+    margin-left: auto; /* Move price to the far right */
+    background-color: #ffb300;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px; /* Round border */
+}
+
+/* Add this style for the delete button */
+.delete-expense-btn {
+    background-color: #ff5733;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.delete-expense-btn:hover {
+    background-color: #e74c3c;
+}

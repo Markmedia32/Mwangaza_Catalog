@@ -1,0 +1,209 @@
+/* dashboard.css */
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #16283a;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: center; /* Center the logo and company name */
+}
+
+.logo {
+    height: 80px; /* Adjust the height of the logo */
+    width: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Add some space to the right of the logo */
+}
+
+.company-name {
+    font-size: 24px; /* Adjust the font size of the company name */
+    font-weight: bold; /* Make the text bold */
+}
+
+nav {
+    background-color: #d47800;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff; /* White color for text */
+    padding: 10px 15px; /* Add padding for better clickable area */
+    border-radius: 5px; /* Add rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+nav ul li a:hover {
+    background-color: #ffffff; /* Change background color on hover */
+    color: #16283a; /* Change text color on hover */
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #16283a;
+}
+
+footer {
+    background-color: #16283a;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Dashboard-specific styles */
+.order-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+
+.order {
+    background-color: #ffffff; /* White background */
+    padding: 15px; /* Padding inside the card */
+    border: 1px solid #dddddd; /* Border */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for elevation */
+    width: 300px;
+    height: auto;
+}
+
+.order:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow on hover */
+}
+
+.order strong {
+    color: #16283a; /* Dark blue color for strong text */
+}
+
+.order p {
+    margin: 8px; /* Increased bottom margin for paragraph elements */
+}
+
+.order span {
+    font-weight: bold; /* Bold text for span elements */
+    color: #333333; /* Dark gray color for span text */
+}
+
+.delete-btn {
+    padding: 8px 16px; /* Padding for the delete button */
+    background-color: #e74c3c; /* Red background color */
+    color: white; /* White text color */
+    border: none; /* No border */
+    border-radius: 20px; /* Rounded corners */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.delete-btn:hover {
+    background-color: #c0392b; /* Darker red color on hover */
+}
+
+/* Form styles */
+#order-form {
+    margin-bottom: 20px;
+}
+
+#order-form div {
+    margin-bottom: 10px;
+}
+
+#order-form label {
+    display: block;
+}
+
+#order-form input[type="text"],
+#order-form input[type="date"],
+#order-form input[type="number"], /* Add this line */
+#order-form select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#order-form button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #16283a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#order-form button[type="submit"]:hover {
+    background-color: #0e1b27;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    .logo-container {
+        flex-direction: column;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        text-align: left;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 0;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px;
+    }
+
+    nav .menu-toggle {
+        display: block;
+        cursor: pointer;
+        color: #ffffff;
+        text-align: center;
+        padding: 10px;
+        background-color: #d47800;
+    }
+
+    nav .menu-toggle:hover {
+        background-color: #c66c00;
+    }
+
+    nav.active ul {
+        display: flex;
+    }
+}
+
+/* Hide the menu toggle button by default */
+.menu-toggle {
+    display: none;
+}
