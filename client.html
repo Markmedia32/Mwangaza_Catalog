@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customers</title>
+    <link rel="stylesheet" href="client.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Customers</h1>
+        <div class="customer-form">
+            <input type="text" id="customerName" placeholder="Customer Name">
+            <input type="text" id="customerEmail" placeholder="Customer Email">
+            <input type="text" id="customerPhone" placeholder="Customer Phone">
+            <select id="customerStatus">
+                <option value="active">Active</option>
+                <option value="inactive">Inactive</option>
+            </select>
+            <button id="addCustomerBtn">Add Customer</button>
+        </div>
+        <div class="customer-list" id="customerList">
+            <!-- Customer cards will be added here dynamically -->
+        </div>
+    </div>
+    <script src="client.js"></script>
+</body>
+</html>
