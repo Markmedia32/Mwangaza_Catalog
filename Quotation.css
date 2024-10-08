@@ -1,0 +1,186 @@
+/* General Page Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f3f7;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #4a90e2;
+    font-weight: 700;
+    font-size: 32px;
+}
+
+/* Invoice Container */
+.invoice-container {
+    max-width: 750px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.invoice-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.bakery-info,
+.client-info {
+    width: 48%;
+}
+
+.bakery-info img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.bakery-info label,
+.client-info label {
+    font-weight: 600;
+    color: #666;
+    margin-top: 10px;
+    display: block;
+}
+
+.bakery-info input,
+.client-info input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Invoice Table */
+.invoice-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.invoice-table th,
+.invoice-table td {
+    border: 1px solid #f0f0f0;
+    padding: 15px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.invoice-table th {
+    background-color: #4a90e2;
+    color: #fff;
+    font-weight: bold;
+}
+
+.invoice-table td input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.invoice-table td span.total-price {
+    display: inline-block;
+    padding: 8px;
+    background-color: #e9f6ff;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #4a90e2;
+}
+
+#add-item {
+    display: inline-block;
+    margin: 10px 0 20px;
+    padding: 10px 15px;
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#add-item:hover {
+    background-color: #357abf;
+}
+
+.invoice-total {
+    text-align: right;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Generate PDF Button */
+#generate-pdf {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #28a745;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#generate-pdf:hover {
+    background-color: #218838;
+}
+
+/* Styling Form Fields and Inputs */
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+    color: #555;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+}
+
+/* Mobile Responsive Design */
+@media screen and (max-width: 768px) {
+    .invoice-details {
+        flex-direction: column;
+    }
+
+    .bakery-info,
+    .client-info {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .invoice-table {
+        font-size: 12px;
+    }
+}
