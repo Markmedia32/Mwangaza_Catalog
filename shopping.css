@@ -21,7 +21,15 @@ h1 {
 
 .shopping-list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.shopping-list input[type="text"],
+.shopping-list select,
+.shopping-list button {
+    width: 100%;
     margin-bottom: 10px;
 }
 
@@ -31,15 +39,17 @@ h1 {
     border: 1px solid #ddd;
     border-radius: 5px;
     flex-grow: 1;
-    margin-right: 10px;
 }
 
-.shopping-list select {
+.shopping-list select,
+.change-status select {
     padding: 8px;
     font-size: 16px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    margin-right: 10px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
 }
 
 .shopping-list button {
@@ -50,6 +60,7 @@ h1 {
     color: white;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .shopping-list button:hover {
@@ -76,13 +87,27 @@ li {
     margin-bottom: 5px;
     border-radius: 5px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
 }
 
+/* Style for the item name to stand out */
+li span:first-child {
+    font-family: 'Georgia', serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    flex: 1 1 100%;
+    text-align: center;
+}
+
+/* Styles for the stock status */
 .stock-status {
     font-weight: bold;
     padding: 5px 10px;
     border-radius: 3px;
+    margin-right: 10px;
 }
 
 .in-stock {
@@ -98,4 +123,73 @@ li {
 .almost-out-of-stock {
     background-color: #ffc107;
     color: white;
+}
+
+/* Styles for the change status dropdown and button */
+.change-status {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.change-status select,
+.change-status button {
+    width: auto;
+    margin-bottom: 5px;
+}
+
+.change-status button {
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.change-status button:hover {
+    background-color: #0056b3;
+}
+
+/* Style for the remove button */
+.delete-btn {
+    margin-left: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 600px) {
+    .shopping-list {
+        flex-direction: column;
+    }
+
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .stock-status,
+    .delete-btn,
+    .change-status {
+        width: 100%;
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    li span:first-child {
+        text-align: center;
+    }
 }
